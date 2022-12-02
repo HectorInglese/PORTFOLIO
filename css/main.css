@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  z-index: 2;
+  position: fixed;
+  height: 100vh;
+  width: 5.3em;
+  background-color: #0e0e0e;
+  border-right: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.navbar .logo-cont {
+  width: 100%;
+}
+.navbar .logo-cont .logo {
+  margin-top: 1.5em;
+  width: 100%;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.navbar ul {
+  margin-top: 5em;
+}
+.navbar ul li {
+  width: 100%;
+  list-style: none;
+}
+.navbar ul li a {
+  transition: all ease-out 0.3s;
+  padding: 1.2rem 0.5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.navbar ul li a:hover {
+  background-color: rgba(123, 123, 123, 0.272);
+}
+.navbar ul li a:hover span {
+  font-weight: 500;
+}
+.navbar ul li a span {
+  font-size: 0.8em;
+  width: 100%;
+  color: white;
+  transition: all ease-out 0.3s;
+}
+.navbar .socials {
+  margin: auto auto 1em;
+  width: 100%;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+}
+.navbar .socials .social-links {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.navbar .socials .social-links i {
+  font-size: 1.4em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow: overlay;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 500px;
+}
+.wrapper section {
+  color: white;
+  max-width: 100%;
+  height: 100vh;
+  margin-left: 5.3em;
+  background-color: #1c1c1c;
+  scroll-snap-align: start;
+}
+.wrapper #hero {
+  position: relative;
+}
+.wrapper #hero div {
+  position: absolute;
+}
+.wrapper #hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 7em;
+  z-index: 3;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.wrapper #hero .hero-text p {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0.5em 0;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #hero .hero-text h2 {
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #hero .blur {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.231);
+}
+.wrapper #hero #particles-js {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper #skills {
+  border-top: 1px solid black;
+}
+.wrapper #skills .skill-cont {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper #skills .skill-cont .skill-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #skills .skill-cont .skill-block h2 {
+  font-size: 1.5em;
+}
+.wrapper #skills .skill-cont .skill-block .skills-list {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #393E46;
+  border-radius: 50px;
+  padding: 1em;
+}
+.wrapper #skills .skill-cont .skill-block .skills-list .skill {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+  gap: 0.6em;
+}
+.wrapper #skills .skill-cont .skill-block .skills-list .skill i {
+  font-size: 1.4em;
+}
+.wrapper #skills .skill-cont .skill-block .skills-list .skill h3 {
+  font-size: 1.2em;
+}
+.wrapper #skills .skill-cont .path-block {
+  width: 70%;
+  height: 80%;
+  margin-left: 2em;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #skills .skill-cont .path-block h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.wrapper #skills .skill-cont .path-block .path-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5em;
+  width: 100%;
+  background-color: #393E46;
+  border-radius: 50px;
+  padding: 2em;
+  gap: 2em;
+}
+.wrapper #skills .skill-cont .path-block .path-list a {
+  padding: 0.5em;
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  border: rgb(255, 255, 255) 1px solid;
+  transition: all ease 0.3s;
+}
+.wrapper #skills .skill-cont .path-block .path-list a:hover {
+  background-color: #070707;
+  font-weight: 600;
+}
+.wrapper #projects .projects-block {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1.5em;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #projects .projects-block .grid-project {
+  min-width: 0;
+  min-height: 0;
+  background-color: #393E46;
+  border-radius: 50px;
+  border: 1px solid white;
+  padding: 1em;
+}
+.wrapper #projects .projects-block .grid-project .project-img {
+  border-radius: 30px;
+  width: 100%;
+  height: 40%;
+  margin-bottom: 0.5em;
+}
+.wrapper #projects .projects-block .grid-project h4 {
+  margin-left: 1em;
+}
+.wrapper #projects .projects-block .grid-project p {
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+.wrapper #projects .projects-block .grid-project .link-cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.7em auto;
+}
+.wrapper #projects .projects-block .grid-project .link-cont a {
+  font-size: 0.8em;
+  padding: 0.5em;
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  border: rgb(255, 255, 255) 1px solid;
+  transition: all ease 0.3s;
+}
+.wrapper #projects .projects-block .grid-project .link-cont a:hover {
+  background-color: #070707;
+  font-weight: 600;
+}
+.wrapper #projects .projects-block .grid-project .tags-cont {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.wrapper #contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper #contact .contact-block {
+  width: 90%;
+  height: 80%;
+  background-color: #393E46;
+  border-radius: 5000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-shadow: 1px 1px 2px black;
+}
+.wrapper #contact .contact-block h3 {
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+.wrapper #contact .contact-block p {
+  margin: 1.5em;
+}
+.wrapper #contact .contact-block a {
+  margin: 1em;
+  color: white;
+  padding: 0.7em;
+  border-radius: 50px;
+  background-color: #1c1c1c;
+  transition: all 0.3s ease;
+}
+.wrapper #contact .contact-block a:hover {
+  background-color: #0e0e0e;
+  font-weight: bold;
+}
+.wrapper #contact .contact-block .primary {
+  font-size: 12em;
+  text-shadow: 11px 11px 21px black;
+}
+
+@media all and (max-width: 500px) {
+  .navbar {
+    display: none;
+    position: relative;
+  }
+  .wrapper {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+    margin: 0;
+  }
+  .wrapper section {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper #hero {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper #hero .hero-text {
+    padding: 1em;
+    font-size: 15px;
+  }
+  .wrapper #skills {
+    padding: 0;
+    margin: 0;
+  }
+  .wrapper #skills .skill-cont {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .wrapper #skills .skill-cont .skill-block {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .wrapper #skills .skill-cont .skill-block .skills-list {
+    height: 90%;
+    width: 100%;
+  }
+  .wrapper #skills .skill-cont .skill-block .skills-list .skill-list {
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper #skills .skill-cont .skill-block .skills-list .skill-list li {
+    font-size: 1.3em;
+  }
+  .wrapper #skills .skill-cont .path-block {
+    display: none;
+  }
+  .wrapper #projects {
+    width: 100%;
+    height: 210vh;
+  }
+  .wrapper #projects .projects-block {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .wrapper #contact {
+    width: 100%;
+  }
+  .wrapper #contact .contact-block {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    padding: 1em;
+    flex-direction: column;
+  }
+  .wrapper #contact .contact-block h3 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=main.css.map */
